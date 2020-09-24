@@ -1,0 +1,569 @@
+@import "variables";
+@import "reset";
+@import "nav";
+@import "placeholders";
+
+html {
+    font-family: $main-font;
+}
+
+body {
+    font-family: $main-font; /*para pisar bootstrap*/
+}
+
+.container {
+    margin: 0 100px;
+}
+
+/*HEADER*/
+
+header {
+    background-color: $pitlaneBlue;
+}
+
+
+
+h1 {
+    a {
+    font-family: $title-font;
+    font-weight: 400;
+    color:white;
+    font-size: 2.5rem;
+    padding: 16px 6px;
+    margin-left: 2rem;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    }
+    a:hover {
+        color: white;
+        text-decoration: none; /*Para pisar bootstrap*/
+    }
+}
+
+
+
+h1 {
+    line-height: 1.2;
+    margin-bottom: 0; /*para pisar bootstrap*/
+}
+
+.menu {
+    color: white;
+    margin-right: 2rem;
+}
+
+dl, ol, ul {
+    margin-bottom:0; /*para pisar a bootstrap que le pone 1rem*/
+}
+
+header {
+    li {
+        a {
+            color: white;
+            padding: 28px;
+        }
+        a:hover {
+            color: white;
+            background-color: $lighterBlue;
+            text-decoration: none;
+        }
+    }
+}
+
+@keyframes cover-fade {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.animated-cover {
+    position: relative;
+    display:flex;
+    img {
+        width: 100%;
+    }
+}
+
+.animated-cover-son {
+    width: 100%;
+    position: absolute;
+    display:flex;
+    animation-name: cover-fade;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-delay: 0;  
+    img {
+        width: 25%;  
+    }
+}
+
+/*INDEX*/
+
+/*news*/
+
+.news {
+    img {
+        width: 100%;
+    }
+    ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+        li {
+            padding: 1rem;
+            margin: 1rem;
+            width: 20%;
+            div {
+                padding: 1rem;
+                border-right: 2px solid #ddd;
+                border-bottom: 2px solid #ddd;
+                border-radius: 0 0 1rem 0;
+                
+            }
+            p {
+                margin: 1.5rem 1.5rem 1.5rem 0;
+            }
+            h2 {
+                padding: 0.5rem 0 0.5rem 0;
+            }
+        }
+    }
+}
+
+/*last race result*/
+
+.last-result {
+    background-color: $pitlaneBlue;
+    padding: 2rem 25%;
+    margin: auto;
+    display: flex;
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 8px;
+        grid-column-gap: 30px;
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    a {
+        @extend %bttn;
+        color: black;
+        background: white;
+    }
+    a:hover {
+        color: black;
+        background: rgb(180, 180, 180);  
+    }
+    h3 {
+        color: white;
+        text-transform: uppercase;
+        font-size: 2rem;
+        align-self: center;
+        padding-left: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-left: solid 3px black;
+        margin-left: 1rem;
+        display: inline-block;
+    }
+    .mercedes {
+        border-left: solid $mercedes 4px;
+        padding-left: 1rem;
+    }
+    .redbull {
+        border-left: solid $redbull 4px;
+        padding-left: 1rem;
+    }
+    .place {
+        @include flex(flex, space-between, center);
+        background: white;
+        padding: 1rem;
+        border-radius: 0.5rem;
+    }
+    p {
+        color: white;
+        padding-top: 1rem;
+    }
+    .winner {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.last-race-a {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.last-race-b {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.last-race-c {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.last-race-d {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.last-race-e {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 6;
+}
+
+.last-race-f {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    display: flex;
+}
+
+.result-track {
+    width: 4rem;
+}
+
+/* top 3*/
+
+.top3 {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 1rem;
+        img {
+            background-color: #f3f3f3;
+            border-radius: 1rem 1rem 0 0;
+            padding: 0 16px;
+        }
+        h4 {
+            background-color: $pitlaneBlue;
+            border-radius: 0 0 1rem 1rem;
+            padding: 12px;
+            color: white;
+            width: 206px;
+        }
+        .mercedes {
+            border-left: solid $mercedes 8px;
+        }
+        .redbull {
+            border-left: solid $redbull 8px;
+        }
+    }
+} 
+
+.indextable {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    table {
+        margin: 1rem auto 1rem;
+        width: 40%; 
+    }
+    a {
+        @extend %bttn;
+        background-color: $pitlaneBlue;
+        color: white;
+    }
+}
+
+/*STANDINGS*/
+
+.position {
+    table {
+        margin: 3rem auto;
+        width: 60%
+    }
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    padding: 0.5rem 2rem;
+}
+
+#carousel-standings {
+    margin: 2rem auto;
+    width: 60%;
+}
+
+.carousel-indicators {
+    li {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+    }
+}
+
+/*DRIVERS*/
+
+.driver {
+    ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    li{
+        background-color: #f3f3f3;
+        padding: 0 1rem;
+        margin: 1rem 0.8rem;
+        display: inline-block;
+        border-radius: 1rem;
+    }
+    .name-flag {
+        @include flex(flex, space-between, center);
+        margin: 8px 0;
+    }
+    h2 {
+        padding: 0.5rem;
+    }
+    h3 {
+        padding: 0.5rem;
+        color: rgb(128, 128, 128);
+        border-top: solid #999 1px;
+        margin-top: 0.5rem;
+    }
+    .mugshot {
+        @include flex(flex, space-between, flex-end);
+    }
+}
+
+.flag {
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+
+.pilot-nmbr {
+    font-size: 2.5rem;
+}
+
+
+@each $team-name, $team-color in $teams {
+    .#{$team-name} .pilot {
+        border-left: solid $team-color 6px;
+    }
+}
+
+/*RACES*/
+
+.track {
+    ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    li{
+        background-color: #f3f3f3;
+        padding: 0 1rem;
+        margin: 1rem 0.8rem;
+        display: inline-block;
+        border-radius: 1rem;
+        iframe {
+            width: 100%;
+        }
+    }
+    .track-map {
+        img {
+            min-width: 320px;
+        }
+    }
+    .name-flag {
+        @include flex(flex, space-between, center);
+        margin: 8px 0;
+        border-bottom: solid #999 1px;
+    }
+    h2 {
+        padding: 0.5rem;
+    }
+    h3 {
+        padding: 0.5rem;
+        color: rgb(128, 128, 128);
+        border-top: solid #999 1px;
+        margin-top: 0.5rem;
+    }
+    iframe {
+        margin: 12px 0;
+    }
+}
+
+/*CONTACT*/
+
+.contact-us {
+    display: flex;
+    justify-content: center;
+    .row {
+        h2 {
+            text-align: center;
+            margin-top: 3.5rem;
+        }
+        h3 {
+            font-family: $title-font;
+            font-weight: 400;
+            font-size: 20px;
+            color: #9b9b9b;
+            line-height: 1.5;
+        }
+    }
+}
+
+/* ///// inputs /////*/
+
+input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
+    font-size: 0.75em;
+    color: #999;
+    top: -5px;
+    -webkit-transition: all 0.225s ease;
+    transition: all 0.225s ease;
+}
+
+.styled-input {
+    float: left;
+    width: 293px;
+    margin: 1rem 0;
+    position: relative;
+    border-radius: 4px;
+    label {
+        color: #999;
+        padding: 1.3rem 30px 1rem 30px;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        -webkit-transition: all 0.25s ease;
+        transition: all 0.25s ease;
+        pointer-events: none;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .styled-input {
+        width:100%;
+    }
+}
+
+.styled-input.wide { 
+    width: 650px;
+    max-width: 100%;
+}
+
+input,
+textarea {
+    padding: 30px;
+    border: 0;
+    width: 100%;
+    font-size: 1rem;
+    background-color: #2d2d2d;
+    color: white;
+    border-radius: 4px;
+}
+
+input:focus,
+textarea:focus { outline: 0; }
+
+input:focus ~ span,
+textarea:focus ~ span {
+    width: 100%;
+    -webkit-transition: all 0.075s ease;
+    transition: all 0.075s ease;
+}
+
+textarea {
+    width: 100%;
+    min-height: 15em;
+}
+
+.contact-us {
+    .right {
+        float: right;
+    }
+}
+
+.input-container {
+    width: 650px;
+    max-width: 100%;
+    margin: 8px auto 25px auto;
+}
+
+.submit-btn {
+    padding: 7px 35px;
+    border-radius: 60px;
+    display: inline-block;
+    background-color: #4b8cfb;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.06),
+              0 2px 10px 0 rgba(0,0,0,0.07);
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(1px);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.10),
+              0 1px 1px 0 rgba(0,0,0,0.09);
+}
+
+@media (max-width: 768px) {
+    .submit-btn {
+        width:100%;
+        float: none;
+        text-align:center;
+    }
+}
+
+input[type=checkbox] + label {
+  color: #ccc;
+  font-style: italic;
+} 
+
+input[type=checkbox]:checked + label {
+  color: #f00;
+  font-style: normal;
+}
+
+/*FOOTER*/ 
+
+footer {
+    color: rgb(207, 207, 207);
+    background-color: #20262e;
+    padding: 2rem;
+    margin-top: 3rem;
+    text-align: center;
+    font-weight: 300;
+    line-height: 1; /*para pisar bootstrap*/
+    a {
+        color: rgb(207, 207, 207);
+    }
+    p {
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+    i {
+        padding: 6px;
+        font-size: 1.5rem;
+    }
+}
+
+@import "responsive";

@@ -1,0 +1,34 @@
+$pitlaneBlue:  #2c3541;
+$lighterBlue: #3c598a;
+
+
+$main-font: 'Lato', sans-serif;
+$title-font: 'Alata', sans-serif;
+
+
+
+
+
+$mercedes: #00D2BE;
+$ferrari: #DC0000;
+$redbull: #0600EF;
+$mclaren: #FF8700;
+$racingpoint: #F596C8;
+$renault: #FFF500;
+$alphatauri: #FFF;
+$alpharomeo: #960000;
+$haas: #787878;
+$williams: #0082FA;
+
+$teams: (
+    mercedes: $mercedes,
+    ferrari: $ferrari,
+    redbull: $redbull,
+    mclaren: $mclaren,
+    racingpoint: $racingpoint,
+    renault: $renault,
+    alphatauri: $alphatauri,
+    alpharomeo: $alpharomeo,
+    haas: $haas,
+    williams: $williams);
+

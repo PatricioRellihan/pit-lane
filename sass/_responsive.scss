@@ -1,0 +1,174 @@
+@media (max-width: 768px) {
+
+
+    /*NAV*/
+
+    nav {
+        ul {
+            display: none;
+        }
+    }
+
+    footer {
+        margin-top: 1rem;
+    }
+
+    /*INDEX*/
+    
+    .news {
+        ul {
+            padding: 8px;
+            margin: 0;
+            li {
+                width: 50%;
+                box-sizing: border-box;
+                margin: 0;
+                padding: 16px 8px 0 8px;
+                div {
+                    padding: 2px;
+                    h2 {
+                        display: none;
+                    }
+                    p {
+                        margin: 12px 12px 12px 0;
+                    }
+                }
+            }
+
+        }
+    }
+    
+    .last-result {
+        padding: 1rem;
+        .grid {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .top3 {
+            flex-direction: column;
+            div {
+                margin-bottom: 1rem;
+            }
+            .second-third {
+                display: none;
+            }
+    }
+    .indextable {
+        table {
+        width: 80%;
+        th {
+            padding: 0;
+        }
+        td {
+            padding: 0.5rem;
+        }
+        a {
+            width: 100%;
+        }
+    }
+    }
+
+    /*STANDINGS*/
+
+    .position {
+        width: 100vw;
+        table {
+            margin: 0;
+            width: 100vw;
+        }
+        .mini {
+            display: none;
+        }
+
+        th {
+            padding: 0.5rem;
+        }
+
+        td {
+            padding: 0.5rem 0;
+        }
+    }
+
+    #carousel-standings {
+        margin: 0;
+        width: 100%;
+    }
+
+    .standings-footer {
+        margin: 0;
+    }
+
+   
+
+    /*DRIVERS*/
+
+    .driver {
+        .container {
+            margin: 0;
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .mugshot {
+                img {
+                    width: 50%;
+                }
+            }
+        }
+    }
+
+    /*RACES*/
+    
+    .track {
+        .container {
+            margin: 0;
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            }
+            iframe {
+                display: none;
+            }
+        }
+    
+
+    /*CONTACT*/
+
+    .contact-us {
+        .right {
+            float: none;
+        }
+        width: 100vw;
+        .row {
+            width: 100%;
+            h2 {
+                margin-top: 1rem;
+            }
+        }
+        h2 {
+            margin-top: 1rem;
+        }
+        div {
+            .input-container {
+                width: 80%;
+            }
+            .styled-input {
+                float: none;
+                width: 80%;
+            }
+
+            .submit-btn {
+                padding: 8px 0;
+                width: 60%;
+                margin: auto;
+            }
+        }
+    }
+
+
+}

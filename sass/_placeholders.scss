@@ -1,0 +1,12 @@
+@mixin flex($display, $justify, $align) {
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+%bttn {
+    align-self: center;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
