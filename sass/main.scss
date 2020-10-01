@@ -19,6 +19,9 @@ body {
 
 header {
     background-color: $pitlaneBlue;
+    .open, .close {
+        display: none;
+    }
 }
 
 

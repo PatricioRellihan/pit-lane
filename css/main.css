@@ -45,6 +45,9 @@ body {
 header {
   background-color: #2c3541;
 }
+header .open, header .close {
+  display: none;
+}
 
 h1 a {
   font-family: "Alata", sans-serif;
@@ -593,9 +596,68 @@ footer i {
 }
 
 @media (max-width: 768px) {
+  /*HEADER*/
+  header .open {
+    display: block;
+  }
+  header .open, header .close {
+    position: absolute;
+    top: 17px;
+    left: 20px;
+  }
+  header .open img, header .close img {
+    width: 25px;
+  }
+  header .animated-cover {
+    margin-top: 60px;
+  }
+
   /*NAV*/
+  nav {
+    display: inline-block;
+    text-align: center;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #2c3541;
+    border-bottom: 2px solid #ddd;
+    z-index: 1;
+  }
+  nav h1 {
+    display: block;
+    margin: auto;
+  }
+  nav h1 a {
+    font-size: 1.5rem;
+    margin: 0;
+  }
   nav ul {
     display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #2c3541;
+    z-index: 1;
+  }
+
+  #nav:target .close {
+    display: block;
+    z-index: 2;
+  }
+  #nav:target ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #nav:target ul li {
+    margin: 1rem 0;
+  }
+  #nav:target ul li a {
+    padding: 0;
+    font-size: 1.5rem;
   }
 
   footer {
