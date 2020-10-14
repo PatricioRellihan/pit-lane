@@ -78,10 +78,12 @@
     }
 
     /*INDEX*/
-    
+
+    /*News*/
+
     .news {
         ul {
-            padding: 8px;
+            padding: 0 8px;
             margin: 0;
             li {
                 width: 50%;
@@ -90,6 +92,7 @@
                 padding: 16px 8px 0 8px;
                 div {
                     padding: 2px;
+                    min-height: 120px;
                     h2 {
                         display: none;
                     }
@@ -101,12 +104,21 @@
 
         }
     }
-    
+
+    /*Last race result */
+
     .last-result {
-        padding: 1rem;
+        padding: 0 16px;
+        margin-top: 1rem;
         .grid {
             display: flex;
             flex-direction: column;
+            a {
+                margin: 12px auto;
+                width: 40%;
+                text-align: center;
+                padding: 8px 12px;        
+            }
         }
     }
 
@@ -128,10 +140,10 @@
         td {
             padding: 0.5rem;
         }
-        a {
-            width: 100%;
         }
-    }
+        a {
+            padding: 8px 12px;
+        }
     }
 
     /*STANDINGS*/
@@ -198,6 +210,9 @@
             iframe {
                 display: none;
             }
+            h4 {
+                padding-bottom: 1rem;
+            }
         }
     
 
@@ -228,7 +243,6 @@
 
             .submit-btn {
                 padding: 8px 0;
-                width: 60%;
                 margin: auto;
             }
         }
